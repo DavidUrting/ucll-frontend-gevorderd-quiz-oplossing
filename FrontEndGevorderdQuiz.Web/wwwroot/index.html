@@ -14,56 +14,60 @@
     <title>UCLL Quiz</title>
 </head>
 <!-- 
-De class 'container' zorgt ervoor dat Bootstrap (onder andere) marge voorziet. 
+De class 'container' zorgt ervoor dat Bootstrap (onder andere) margins voorziet. 
 -->
 <body class="container">
     <h1>UCLL Quiz</h1>
     <main>
-    <!--
-    In deze sectie worden de vragen getoond.
-    De vraag en de mogelijke antwoorden worden één per één getoond (door middel van JavaScript).
-    Meer informatie over hoe je best forms samenstelt in Bootstrap: https://v4-alpha.getbootstrap.com/components/forms/
-    -->
-        <section id="quiz">
+        <section id="vragen">
+            <!--
+            In deze sectie worden de vragen getoond.
+            De vraag en de 4 mogelijke antwoorden worden één per één getoond.
+            Meer informatie over hoe je best forms samenstelt in Bootstrap: https://v4-alpha.getbootstrap.com/components/forms/
+            -->
             <form>
                 <fieldset class="form-group">
                     <!-- In de 'legend' komt de vraag. -->
-                    <legend id="question"></legend>
+                    <legend></legend>
+                    <!-- En hier komen dan de 4 mogelijke antwoorden. Bemrk dat elke input een value krijgt van 0 tot en met 3. -->
                     <div class="form-check">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="mogelijkeAntwoorden" value="0">
-                            <span id="mogelijkAntwoord0">test</span>
+                            <span id="mogelijkAntwoord0"></span>
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="mogelijkeAntwoorden" value="1">
-                            <span id="mogelijkAntwoord1">test</span>
+                            <span id="mogelijkAntwoord1"></span>
                         </label>
                     </div>
                     <div class="form-check disabled">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="mogelijkeAntwoorden" value="2">
-                            <span id="mogelijkAntwoord2">test</span>
+                            <span id="mogelijkAntwoord2"></span>
                         </label>
                     </div>
                     <div class="form-check disabled">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="mogelijkeAntwoorden" value="3">
-                            <span id="mogelijkAntwoord3">test</span>
+                            <span id="mogelijkAntwoord3"></span>
                         </label>
                     </div>
                 </fieldset>
             </form>
         </section>
         <!-- De 'results' sectie wordt initieel verborgen. -->
-        <section id="results" class="hidden">
-            <h2>Resultaat (gewonnen/verloren)</h2>
+        <section id="resultaat" class="hidden">
+            <!-- De inhoud van deze h2 wordt dynamisch opgevuld afhankelijk of de speler gewonnen of verloren heeft. -->
+            <h2></h2>
             <p>Uw score is <span id="score"></span></p>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>    
+
+    <script src="js/quiz.js"></script>
 </body>
 </html>
